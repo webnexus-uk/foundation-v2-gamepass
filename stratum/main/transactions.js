@@ -93,9 +93,9 @@ const Transactions = function (config, rpcData) {
       ]);
     }
 
-    const devFundReward = rpcData.DevFundValue;
+    const devFundReward = _this.rpcData.DevFundValue;
     const devFundScript = utils.addressToScript(
-      rpcData.DevFundAddress,
+      _this.rpcData.DevFundAddress,
       network
     );
     txOutputBuffers.push(
@@ -105,9 +105,9 @@ const Transactions = function (config, rpcData) {
         devFundScript,
       ])
     );
-    const proofOfGameplayReward = rpcData.ProofOfGameplayValue;
+    const proofOfGameplayReward = _this.rpcData.ProofOfGameplayValue;
     const proofOfGameplayScript = utils.addressToScript(
-      rpcData.ProofOfGameplayAddress,
+      _this.rpcData.ProofOfGameplayAddress,
       network
     );
     txOutputBuffers.push(
